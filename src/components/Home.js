@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
 
 class Home extends Component {
   
@@ -18,12 +19,21 @@ class Home extends Component {
             <div>name is {this.props.name}, age is {this.props.age}</div>
             {content}
           </div>
+          <button class="btn btn-primary"> make me order</button>
+          <div>
+            {this.props.children}
+          </div>
         </div>
       </div>
       
     );
     
   }
+}
+
+Home.PropTypes = {
+  name: PropTypes.string,
+  children: PropTypes.element.isRequired
 }
 
 export default Home;
