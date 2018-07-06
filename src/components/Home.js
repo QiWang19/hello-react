@@ -26,7 +26,7 @@ class Home extends Component {
             <div>name is {this.props.name}, age is {this.props.age}</div>
             {content}
           </div>
-          <button onClick={this.onMakeOlder.bind(this)} className="btn btn-primary"> make me older</button>
+          <button onClick={() => {this.onMakeOlder()}} className="btn btn-primary"> make me older</button>
           <div>
             {this.props.children}
           </div>
