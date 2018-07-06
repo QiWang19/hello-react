@@ -3,7 +3,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Home extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.age = this.props.age;
+  }
+
+  onMakeOlder() {
+    this.age += 3
+  }
 
   render(){
     console.log(this.props);
@@ -19,7 +26,7 @@ class Home extends Component {
             <div>name is {this.props.name}, age is {this.props.age}</div>
             {content}
           </div>
-          <button class="btn btn-primary"> make me order</button>
+          <button onClick={this.onMakeOlder.bind(this)} className="btn btn-primary"> make me older</button>
           <div>
             {this.props.children}
           </div>
