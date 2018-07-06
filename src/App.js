@@ -8,7 +8,12 @@ class App extends Component {
   
 
   render(){
+    const user = {
+      name : "Anns",
+      hobbies:["Sports", "Reading"]
+    }
     return (
+      
       <div className="container">
         <div className="row">
           <div className="col-xs-l col-xs-offset-11">
@@ -23,7 +28,7 @@ class App extends Component {
 
         <div className="row">
           <div className="col-xs-l col-xs-offset-11">
-            <Home/>
+            <Home name = {"Max"} age = {12} user = {user} />
           </div>
         </div>
       </div>
