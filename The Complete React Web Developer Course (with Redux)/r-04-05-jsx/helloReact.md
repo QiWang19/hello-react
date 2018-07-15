@@ -355,4 +355,14 @@ ReactDOM.render(<Counter/>, document.getElementById('app'));
 
 #### Part II  
 
-use setState function, 'prevState' 参数
+use setState function, 'prevState' 参数(optional), return an object  
+
+```javascript
+handleMinusOne() {
+    this.setState((prevState)=>{
+      return {
+        count: prevState.count - 1
+      };
+    });
+  }
+```
