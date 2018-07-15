@@ -187,4 +187,42 @@ ReactDOM.render(jsx, document.getElementById('app'));
 Put four component render in one component  
 
 ```javascript
+class IndecisionApp extends React.Component {
+  render() {
+    return(
+      <div>
+        <Header></Header>
+        <Action></Action>
+        <Options></Options>
+        <AddOption></AddOption>
+      </div>
+
+    )
+  }
+}
+ReactDOM.render(<IndecisionApp/>, document.getElementById('app'));
+```  
+
+### Component Props   
+
+Data like the '<Header></Header>' title  
+
+```javascript
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        Options Component here!
+        {/* {this.props.options.length} */}
+
+        {
+          //no curly braces
+          this.props.options.map((option) => 
+          <p key={option}>{option}</p>)
+          
+        }
+      </div>
+    );
+  }
+}
 ```
