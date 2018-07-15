@@ -1,62 +1,56 @@
-console.log('App.js is running!');
-var appRoot = document.getElementById('app');
-
-const app = {
-  title: 'Indecision App',
-  subtitle: 'Put your life in the hands of a computer',
-  option:[]
-};
-const onFormSubmit = (e) => {
-  e.preventDefault();
-  const option = e.target.elements.option.value;
-  // console.log('form submitted');
-  if (option) {
-    app.option.push(option);
-    e.target.elements.option.value = '';
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Indecision</h1>
+        <h2>Put your life in the hands of a computer</h2>
+      </div>
+    );
   }
-  render();
 }
 
-const onRemoveAll = () => {
-  app.option = [];
-  render();
-};
+class Action extends React.Component {
+  render() {
+    return (
+      <div>
+        <button>What should I do?</button>
+      </div>
+    )
+  }
+}
 
-const onMakeDecision=() => {
-  const randomNum = Math.floor((Math.random() * app.option.length));
-  const option = app.option[randomNum];
-  alert(option);
-};
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        Options Component here!
+      </div>
+    );
+  }
+}
 
-const numbers = [55, 101, 1000];
 
-const render = () => {
-  // JSX - JavaScript XML
-  var template = (
-    <div>
-      <h1>{app.title}</h1>
-      {app.subtitle && <p>{app.subtitle}</p>}
-      <p>{app.option.length > 0 ? 'Here are your options': 
-        'No options'}</p>
-      <p>{app.option.length}</p>
-      <button disabled={app.option.length === 0} onClick={onMakeDecision}>What should I do?</button>
-      <button onClick={onRemoveAll}>Remove All</button>
-      
-      <ol>
-        {app.option.length > 0 && 
-          app.option.map((opt)=>{
-            return <li key={opt}>{opt}</li>;
-          })
-        }
+class AddOption extends React.Component {
+  render() {
+    return (
+      <div>
+        AddOption component here
+      </div>
+    );
+  }
+}
 
-      </ol>
-      <form onSubmit={onFormSubmit}>
-        <input type="text" name="option"></input>
-        <button>Add Option</button>
-      </form>
-      
-    </div>
-  );
-  ReactDOM.render(template, appRoot);
-};
-render();
+// dif between component VS html element
+const jsx = (
+  <div>
+    <h1>
+      Title
+    </h1>
+    <Header></Header>
+    <Action></Action>
+    <Options></Options>
+    <AddOption></AddOption>
+  </div>
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));

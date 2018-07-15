@@ -96,4 +96,95 @@ printPlacesLived: function () {
           })
         }
 
+```   
+
+### ES6 Class  
+
+ES6 string  
+
+```javascript
+return `Hi I am ${this.name}`;
+```  
+
+Create class  
+
+```javascript
+class Person {
+    constructor(name = 'Anonymous', age = 0) {
+        // console.log('test');
+        //refer to class instance
+        this.name = name;
+        this.age = age;
+    }
+    getGreeting() {
+        // return 'I am' + this.name + 'Hi!';
+        return `Hi I am ${this.name}`;
+    }
+
+    getDescription() {
+        return `${this.name} is ${this.age} years old`;
+    }
+}
+
+const me = new Person('QI WANG');
+const other = new Person(undefined, 26);
+console.log(me.getGreeting());
+```  
+
+Create subclasses  
+
+```javascript
+class Student extends Person{
+    constructor(name, age, major) {
+        super(name, age);
+        this.major = major;
+    }
+    hasMajor() {
+        return !!this.major;
+    }
+
+    getDescription() {
+      //override method
+        let description = super.getDescription();
+        if (this.hasMajor()) {
+            description += ` Their major is ${this.major}.`;
+        }
+        return description;
+    }
+}
+```  
+
+### Create React Component with ES6 and React  
+
+
+
+```javascript
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Indecision</h1>
+        <h2>Put your life in the hands of a computer</h2>
+      </div>
+    );
+  }
+}
+
+// dif between component VS html element
+const jsx = (
+  <div>
+    <h1>
+      Title
+    </h1>
+    <Header></Header>
+  </div>
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));
+
+```
+
+Put four component render in one component  
+
+```javascript
 ```
