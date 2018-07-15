@@ -73,3 +73,27 @@ var user = {
 user.printPlacesLived();
 
 ```
+
+map function
+
+```javascript
+printPlacesLived: function () {
+    const cityMessages = this.cities.map((city)=>{
+        return city;
+    })
+    return cityMessages;
+}
+``` 
+
+### Array of JSX  
+
+1. render an array  
+2. 'key' React之key详解 https://cnblogs.com/wonyun/p/6743988.html
+```javascript
+{app.option.length > 0 && 
+          app.option.map((opt)=>{
+            return <li key={opt}>{opt}</li>;
+          })
+        }
+
+```
