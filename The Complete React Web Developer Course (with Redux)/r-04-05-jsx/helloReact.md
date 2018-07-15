@@ -256,7 +256,7 @@ class AddOption extends React.Component {
 ```  
 
 ### Method binding  
-
+‘this’ callback 问题，解决方案 https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56  
 mdn bind
 
 ```javascript
@@ -311,7 +311,14 @@ constructor(props) {
 
 ### Component State  
 
-1. add stste to counter app 
+1. Setup default state object
+2. Component rendered with default state values  
+3. Changes state based on event  
+4. Component re-rendered using new state values  
+5. Start again at 3
+
+#### Part I add stste to counter app 
+
   create funcions and bind 
 
 ```javascript
@@ -345,3 +352,7 @@ class Counter extends React.Component {
 
 ReactDOM.render(<Counter/>, document.getElementById('app'));
 ```
+
+#### Part II  
+
+use setState function, 'prevState' 参数
