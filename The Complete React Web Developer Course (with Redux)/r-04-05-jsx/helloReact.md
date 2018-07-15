@@ -225,4 +225,89 @@ class Options extends React.Component {
     );
   }
 }
+```  
+
+### Events & Methods   
+
+1. handleOption函数有参数  
+
+```javascript
+class AddOption extends React.Component {
+
+  handleAddOption(e) {
+    e.preventDefault();
+    const option = e.target.elements.option.value.trim();
+    if (option) {
+      alert(option);
+    }
+  }
+  
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleAddOption}>
+          <input type="text" name="option"></input>
+          <button>AddOption component here</button>
+        </form>          
+      </div>
+    );
+  }
+}
+```  
+
+### Method binding  
+
+mdn bind
+
+```javascript
+const obj = {
+  name: 'Vikram',
+  getName() {
+    return this.name;
+  }
+};
+
+const getName = obj.getName.bind(obj);
+console.log(getName());
+```  
+
+1. even handler loose binding  
+2. override constructor function for React component
+
+```javascript
+//binding
+class Options extends React.Component {
+
+  handleRemoveAll() {
+    // this.props.options = [];
+    alert('remove');
+  }
+
+  render() {
+    return (
+      <div>
+        
+        <button onClick={this.handleRemoveAll.bind(this)}> Remove All</button>
+        {
+          //no curly braces
+          this.props.options.map((option) => 
+          <Option key={option} optionText={option}/>)
+          
+        }
+      </div>
+    );
+  }
+}
+```   
+
+constructor function  
+
+```javascript
+constructor(props) {
+    super(props);
+    this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  }
 ```
+
+### Component State  
+
