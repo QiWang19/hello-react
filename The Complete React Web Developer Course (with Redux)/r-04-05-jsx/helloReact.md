@@ -371,3 +371,15 @@ handleMinusOne() {
 
 Without using setState function has asynchronous problem. Useing update function is better.
 
+#### Indecision State Part I  
+
+Reverse data flow  
+Parents ----------(pass function to cild)-----------> Child  
+        <--(change parents state through function)  
+
+```javascript
+<Options 
+          options={this.state.options}
+          handleDeleteOptions={this.handleDeleteOptions}
+        ></Options>
+```

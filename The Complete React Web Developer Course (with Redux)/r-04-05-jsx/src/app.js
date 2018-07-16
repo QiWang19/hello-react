@@ -3,10 +3,21 @@
 class IndecisionApp extends React.Component {
   constructor(props) {
     super(props);
+    this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
     this.state = {
       options: ['Thing one', 'Thing two', 'Thing three'],
     };
   }
+
+  handleDeleteOptions() {
+    this.setState(()=>{
+      return {
+        options:[]
+      };
+    });
+  }
+
+
   render() {
     const title = 'Indecision';
     const subtitle = 'Put your life in the hands of a computer!'
@@ -16,7 +27,10 @@ class IndecisionApp extends React.Component {
       <div>
         <Header title={title} subtitle={subtitle}></Header>
         <Action hasOption={this.state.options.length > 0}></Action>
-        <Options options={this.state.options}></Options>
+        <Options 
+          options={this.state.options}
+          handleDeleteOptions={this.handleDeleteOptions}
+        ></Options>
         <AddOption></AddOption>
       </div>
 
@@ -54,21 +68,21 @@ class Action extends React.Component {
 
 class Options extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.handleRemoveAll = this.handleRemoveAll.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  // }
 
-  handleRemoveAll() {
-    // this.props.options = [];
-    alert(this.props.options);
-  }
+  // handleRemoveAll() {
+  //   // this.props.options = [];
+  //   alert(this.props.options);
+  // }
 
   render() {
     return (
       <div>
         
-        <button onClick={this.handleRemoveAll}> Remove All</button>
+        <button onClick={this.props.handleDeleteOptions}> Remove All</button>
         {
           //no curly braces
           this.props.options.map((option) => 
