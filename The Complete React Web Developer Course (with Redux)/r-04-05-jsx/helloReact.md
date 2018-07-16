@@ -553,4 +553,6 @@ Directly used with one variable
 When using object, Use JSON.parse() and JSON.stringify()  
 
 
+### Webpack   
 
+![](C:\Users\QiWang\vs git\hello-react\The Complete React Web Developer Course (with Redux)\r-04-05-jsx\pic\webpack.png)
