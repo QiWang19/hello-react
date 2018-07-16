@@ -459,3 +459,8 @@ IndecisionApp.defaultProps = {
 };
   
 ```
+also give value in the tag  
+
+```javascript
+ReactDOM.render(<Counter count={-10}/>, document.getElementById('app'));
+```
