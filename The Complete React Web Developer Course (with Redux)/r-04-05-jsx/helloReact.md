@@ -382,4 +382,31 @@ Parents ----------(pass function to cild)-----------> Child
           options={this.state.options}
           handleDeleteOptions={this.handleDeleteOptions}
         ></Options>
+```  
+
+#### Indecision State Part II  
+
+concat增加数组元素  
+
+```javascript
+handleAddOption(option) {
+    // console.log(option);
+    this.setState((prevState)=> {
+      return {
+        options: prevState.options.concat([option]) 
+      };
+    });
+  }
+```  
+
+error也要写进state更新  
+
+```javascript
+constructor(props) {
+    super(props);
+    this.handleAddOption = this.handleAddOption.bind(this);
+    this.state = {
+      error: undefined
+    };
+  }
 ```

@@ -41,6 +41,7 @@ class Counter extends React.Component {
     };
   }
   handleAddOne() {
+    
     this.setState((prevState)=> {
       //only update the one wanat to change
       return {
