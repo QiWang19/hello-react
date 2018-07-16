@@ -484,5 +484,69 @@ handleDeleteOptions() {
 implicit method  
 
 ```javascript
+handleDeleteOptions() {
+    // this.setState(()=>{
+    //   return {
+    //     options:[]
+    //   }; 
+    // });
+    this.setState(() => ({options:[]}) );
+  }
+``` 
+
+### Remove individual Option  
+
+Define inline arrow function  
+
+### Lifecycle Methods  
+
+```javascript
+componentDidMount() {
+  console.log('fetching data');
+}
+componentDidUpdate(prevProps, prevState) {
+  console.log('saving data!');
+}
+componentWillUnmount() {
+  console.log('componentWillUnmount');
+}
+```  
+
+keep data on the page after refeshing  
+
+```javascript
+componentDidMount() {
+  //deal with invalid json parse arguemnt
+  try{
+    const json = localStorage.getItem('options');
+    const options = JSON.parse(json);
+    if (options) {
+      this.setState(()=>({
+        options: options
+      }));
+    }
+  } catch(e) {
+    //Do nothing
+  }
+  
+}
+componentDidUpdate(prevProps, prevState) {
+  if (prevState.options.length !== this.state.options.length) {
+    //convert object to string
+    const json = JSON.stringify(this.state.options);
+    //store key value pair to localStorage
+    localStorage.setItem('options', json);
+    console.log('saving data');
+  }
+}
+componentWillUnmount() {
+  console.log('componentWillUnmount');
+}
 
 ```
+
+### LocalStorage  
+
+Keep data in (key, value) pair  
+only supports string  
+
