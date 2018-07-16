@@ -463,4 +463,26 @@ also give value in the tag
 
 ```javascript
 ReactDOM.render(<Counter count={-10}/>, document.getElementById('app'));
+```  
+
+### Debug using extension  
+
+### Implicit return object when setState  
+
+original method  
+
+```javascript
+handleDeleteOptions() {
+  this.setState(()=>{
+    return {
+      options:[]
+    };
+  });
+}
+```  
+
+implicit method  
+
+```javascript
+
 ```
