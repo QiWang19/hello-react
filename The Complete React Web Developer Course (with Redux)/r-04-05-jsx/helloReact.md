@@ -409,4 +409,22 @@ constructor(props) {
       error: undefined
     };
   }
+```  
+
+### Stateless functional components 
+
+When components do not have state attributes
+
+```javascript
+//no 'this' words
+const User = (props) => {
+  return (
+    <div>
+      <p>Name: {props.name}</p>
+      <p>Age: </p>
+    </div>
+  );
+};
+
+ReactDOM.render(<User name="Andrew"/>, document.getElementById('app'));
 ```
