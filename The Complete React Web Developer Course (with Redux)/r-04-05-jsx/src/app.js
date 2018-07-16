@@ -1,16 +1,22 @@
 
 
 class IndecisionApp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      options: ['Thing one', 'Thing two', 'Thing three'],
+    };
+  }
   render() {
     const title = 'Indecision';
     const subtitle = 'Put your life in the hands of a computer!'
-    const options = ['Thing one', 'Thing two', 'Thing three'];
+    // const options = ['Thing one', 'Thing two', 'Thing three'];
     //no 'this' words
     return(
       <div>
         <Header title={title} subtitle={subtitle}></Header>
-        <Action></Action>
-        <Options options={options}></Options>
+        <Action hasOption={this.state.options.length > 0}></Action>
+        <Options options={this.state.options}></Options>
         <AddOption></AddOption>
       </div>
 
@@ -36,7 +42,11 @@ class Action extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handlePick}>What should I do?</button>
+        <button onClick={this.handlePick}
+        disabled={!this.props.hasOption}
+        >
+          What should I do?
+        </button>
       </div>
     )
   }
