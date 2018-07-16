@@ -413,7 +413,7 @@ constructor(props) {
 
 ### Stateless functional components 
 
-When components do not have state attributes
+When components do not have state attributes. Faster, end easy to use.
 
 ```javascript
 //no 'this' words
@@ -427,4 +427,35 @@ const User = (props) => {
 };
 
 ReactDOM.render(<User name="Andrew"/>, document.getElementById('app'));
+```
+
+#### Set default values for component  
+
+defaultProps value send to props.  
+Get data through prop, do not use this.
+
+```javascript
+const Header = (props) => {
+    return (
+      <div>
+        <h1>{props.title}</h1>
+        {props.subtitle && <h2>{props.subtitle}</h2>}
+      </div>
+    );
+};
+
+Header.defaultProps = {
+  title: 'Indecision'
+};
+```  
+
+```javascript
+this.state = {
+  options: props.options,
+};
+
+IndecisionApp.defaultProps = {
+  options: []
+};
+  
 ```
