@@ -365,4 +365,9 @@ handleMinusOne() {
       };
     });
   }
-```
+```  
+
+#### Alternative ways setState  
+
+Without using setState function has asynchronous problem. Useing update function is better.
+
