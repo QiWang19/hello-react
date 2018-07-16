@@ -549,4 +549,8 @@ componentWillUnmount() {
 
 Keep data in (key, value) pair  
 only supports string  
+Directly used with one variable  
+When using object, Use JSON.parse() and JSON.stringify()  
+
+
 
