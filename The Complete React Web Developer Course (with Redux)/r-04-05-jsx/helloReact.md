@@ -555,4 +555,4 @@ When using object, Use JSON.parse() and JSON.stringify()
 
 ### Webpack   
 
-![](/pic/webpack.png)
+![](../pic/webpack.png)
