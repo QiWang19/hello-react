@@ -5,9 +5,14 @@
   "author": "Andrew Mead",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "6.24.1",
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
-    "ejsx": "^1.0.0-b2"
+    "ejsx": "^1.0.0-b2",
+    "live-server": "^1.2.0"
+  },
+  "scripts":{
+    "server": "live-server public/"
   },
   "devDependencies": {
     "babel-preset-react": "^6.24.1",
