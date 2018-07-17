@@ -1,8 +1,12 @@
 ## Hello React
 
+The Complete React Web Developer Course (with Redux)  
+
 ### Conditional JSX  
 
+```bash
 babel src/playground/es6-let-const.js --out-file=public/scripts/app.js --presets=env,react --watch
+```
 
 ```javascript
 var app = {
@@ -578,7 +582,8 @@ module.exports = {
 
 exports  
 1.default export   
-can use without use the same name
+can use without use the same name  
+cannot do with const variable  
 
 ```javascript
 const substract = (a, b) => a - b;
@@ -589,7 +594,13 @@ console.log(substractIWant(100, 3));
 
 //or
 export default (a, b) => a - b; 
-```
+
+//WRONG!!
+export default const Option = (props) => {  
+//Work
+export default (props) => {
+```  
+
 2.name exports   
 
 ```javascript
@@ -620,4 +631,14 @@ install -> import -> use
 1. loader: deal with a file
 2. install babel-core to run using webpack
 3. set module in webpack.config.js
-4. add .babelrc for babel using env & react
+4. add .babelrc for babel using env & react  
+
+### One component per file  
+
+1. Create file Option.js, AddOption.js.. 
+2. import React in js files, <b>MUST</b>, all code convert to React.creatclass calls
+3. export component  
+
+1. Moving the componentcode  
+2. Setup import/export  
+3. Move the imports to new file
