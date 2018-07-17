@@ -65,51 +65,12 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
-// import './utils.js';
-// import {square} from './utils.js';
-// console.log('app.js is running!');
-// console.log(square(4));
+// import validator from 'validator';
 
+// console.log( validator.isEmail('test'));
 
-// import substractIWant from './utils.js'
-console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["c" /* isAdult */](17));
-console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* canDrink */](21));
-// console.log(substractIWant(100, 3));
-console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["b" /* default */](65));
-
-/***/ }),
-/* 1 */,
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isSenior; });
-const isAdult = (age)=> {
-    if (age >= 18 ) {
-        return true;
-    }
-    return false;
-}
-/* harmony export (immutable) */ __webpack_exports__["c"] = isAdult;
-
-
-const canDrink = (age) => {
-    if (age >= 21) {
-        return true;
-    }
-    return false;
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = canDrink;
-
-
-const isSenior = (age) =>{
-    return age >= 65;
-}
 
 
 /***/ })
