@@ -642,3 +642,10 @@ install -> import -> use
 1. Moving the componentcode  
 2. Setup import/export  
 3. Move the imports to new file
+
+#### Source map with webpack  
+
+'devtool' define type of the source map  
+
+#### webpack dev server  
+

@@ -19,10 +19,12 @@ module.exports = {
             test: /\.js$/,
             exclude: /node_modules/
         }]
-    }
+    },
+    devtool: 'cheap-module-eval-source-map'
 };
 
 //loader: deal with a file
 //install babel-core to run using webpack
 //set module in webpack.config.js
-//add .babelrc for babel using env & react
+//add .babelrc for babel using env & react  
+
