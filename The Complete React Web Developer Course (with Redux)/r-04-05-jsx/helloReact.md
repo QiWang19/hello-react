@@ -563,4 +563,7 @@ When using object, Use JSON.parse() and JSON.stringify()
 module.exports = {
   
 };
-```
+```  
+
+2. can remove public/scripts/app.js  
+3. remove src links in index.html
