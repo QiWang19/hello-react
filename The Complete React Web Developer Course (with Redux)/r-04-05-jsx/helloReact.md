@@ -585,7 +585,10 @@ const substract = (a, b) => a - b;
 export{ substract as default};
 
 import substractIWant from './utils.js'
-console.log(substractIWant(100, 3));
+console.log(substractIWant(100, 3)); 
+
+//or
+export default (a, b) => a - b; 
 ```
 2.name exports   
 

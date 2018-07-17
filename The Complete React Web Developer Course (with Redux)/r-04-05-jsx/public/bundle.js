@@ -86,7 +86,6 @@ console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["a" /* default */](100, 3));
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return substract; });
 console.log('utils.js is running');
 
 const square = (x) => {
@@ -95,8 +94,8 @@ const square = (x) => {
 /* unused harmony export square */
 
 
-const substract = (a, b) => a - b;
-
+/* harmony default export */ __webpack_exports__["a"] = ((a, b) => a - b);
+// export{ substract as default};
 // export {square};
 //exports - default export - name exports
 //import the exports variable from file
