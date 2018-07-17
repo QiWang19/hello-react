@@ -559,7 +559,7 @@ When using object, Use JSON.parse() and JSON.stringify()
 
 1. expose something(object) to another file.
 
-```javascript
+```json
 module.exports = {
   
 };
@@ -567,3 +567,43 @@ module.exports = {
 
 2. can remove public/scripts/app.js  
 3. remove src links in index.html
+4. change src to bundle
+
+```html
+<!-- <script src="/scripts/app.js"></script> -->
+<script src="/bundle.js"></script>
+```
+
+#### break to multiple files  
+
+exports  
+1.default export   
+can use without use the same name
+
+```javascript
+const substract = (a, b) => a - b;
+export{ substract as default};
+
+import substractIWant from './utils.js'
+console.log(substractIWant(100, 3));
+```
+2.name exports   
+
+```javascript
+const square = (x) => {
+   return x * x;
+}
+
+export {square};
+// or useing
+export const square = (x) => {
+   return x * x;
+}
+```
+
+import the exports variable from file
+
+```javascript
+import {square} from './utils.js';
+
+```
