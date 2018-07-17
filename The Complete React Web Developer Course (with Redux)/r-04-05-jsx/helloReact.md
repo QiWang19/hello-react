@@ -614,3 +614,10 @@ import {square} from './utils.js';
 #### import npm modules  
 
 install -> import -> use
+
+#### use babel with webpack  
+
+1. loader: deal with a file
+2. install babel-core to run using webpack
+3. set module in webpack.config.js
+4. add .babelrc for babel using env & react
