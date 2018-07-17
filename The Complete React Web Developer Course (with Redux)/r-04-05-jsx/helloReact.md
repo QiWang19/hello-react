@@ -609,4 +609,8 @@ import the exports variable from file
 ```javascript
 import {square} from './utils.js';
 
-```
+```  
+
+#### import npm modules  
+
+install -> import -> use

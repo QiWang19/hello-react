@@ -10,6 +10,7 @@
     "babel-preset-react": "6.24.1",
     "ejsx": "^1.0.0-b2",
     "live-server": "^1.2.0",
+    "validator": "8.0.0",
     "webpack": "3.1.0"
   },
   "devDependencies": {
