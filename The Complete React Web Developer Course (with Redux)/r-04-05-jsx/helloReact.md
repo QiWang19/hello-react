@@ -375,7 +375,7 @@ Without using setState function has asynchronous problem. Useing update function
 
 Reverse data flow  
 Parents ----------(pass function to cild)-----------> Child  
-        <--(change parents state through function)  
+           <--(change parents state through function)  
 
 ```javascript
 <Options 
@@ -555,4 +555,12 @@ When using object, Use JSON.parse() and JSON.stringify()
 
 ### Webpack   
 
-![](pic/webpack.png)
+![](pic/webpack.png)  
+
+1. expose something(object) to another file.
+
+```javascript
+module.exports = {
+  
+};
+```
