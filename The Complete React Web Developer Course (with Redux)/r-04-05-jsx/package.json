@@ -9,10 +9,8 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "ejsx": "^1.0.0-b2",
-    "live-server": "^1.2.0"
-  },
-  "scripts":{
-    "server": "live-server public/"
+    "live-server": "^1.2.0",
+    "webpack": "3.1.0"
   },
   "devDependencies": {
     "babel-preset-react": "^6.24.1",
@@ -20,7 +18,10 @@
     "uglify-js": "^3.4.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server public/",
+    "build": "webpack",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "description": ""
 }
