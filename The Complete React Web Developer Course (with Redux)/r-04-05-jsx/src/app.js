@@ -1,4 +1,6 @@
-// import validator from 'validator';
+//install-import-use
 
-// console.log( validator.isEmail('test'));
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+const template = <p>tests</p>;
+ReactDOM.render(template, document.getElementById('app'));

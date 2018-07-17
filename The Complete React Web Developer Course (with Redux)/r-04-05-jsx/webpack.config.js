@@ -12,5 +12,17 @@ module.exports = {
     output:{
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
+    },
+    module: {
+        rules:[{
+            loader: 'babel-loader',
+            test: /\.js$/,
+            exclude: /node_modules/
+        }]
     }
 };
+
+//loader: deal with a file
+//install babel-core to run using webpack
+//set module in webpack.config.js
+//add .babelrc for babel using env & react
