@@ -649,4 +649,13 @@ install -> import -> use
 
 #### webpack dev server  
 
-package.json uses the configuire in the webpack.config.js
+package.json uses the configuire in the webpack.config.js  
+webpack do not directly use bundle.js under public file, otherwise, serve from memory. Fast  
+
+To build bundle.js  
+
+```bash
+yarn run build
+```  
+
+#### Use babel plugin to simplify the code
