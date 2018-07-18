@@ -649,3 +649,4 @@ install -> import -> use
 
 #### webpack dev server  
 
+package.json uses the configuire in the webpack.config.js
