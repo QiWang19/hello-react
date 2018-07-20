@@ -664,3 +664,5 @@ yarn run build
 2. use arrow functions, do not need bind in constructor  
 3. delete the constructor  
 
+### React model: third party component  
+
