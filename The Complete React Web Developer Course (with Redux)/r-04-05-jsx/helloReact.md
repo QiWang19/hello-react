@@ -658,4 +658,9 @@ To build bundle.js
 yarn run build
 ```  
 
-#### Use babel plugin to simplify the code
+#### Use babel plugin to simplify the code  
+
+1. pull the state out of constructor  
+2. use arrow functions, do not need bind in constructor  
+3. delete the constructor  
+

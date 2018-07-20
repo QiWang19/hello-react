@@ -6,16 +6,19 @@ import AddOption from './AddOption.js';
 
 
 class IndecisionApp extends React.Component {
-    constructor(props) {
-      super(props);
-      this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-      this.handlePick = this.handlePick.bind(this);
-      this.handleAddOption = this.handleAddOption.bind(this);
-      this.handleDeleteOption = this.handleDeleteOption.bind(this);
-      this.state = {
-        options: props.options,
-      };
-    }
+    state = {
+      options: []
+    };
+    // constructor(props) {
+    //   super(props);
+    //   this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
+    //   this.handlePick = this.handlePick.bind(this);
+    //   this.handleAddOption = this.handleAddOption.bind(this);
+    //   this.handleDeleteOption = this.handleDeleteOption.bind(this);
+    //   this.state = {
+    //     options: props.options,
+    //   };
+    // }
   
     componentDidMount() {
       //deal with invalid json parse arguemnt
@@ -46,11 +49,11 @@ class IndecisionApp extends React.Component {
     }
   
   
-    handleDeleteOptions() {
+    handleDeleteOptions = () => {
       this.setState(() => ({options:[]}) );
     }
   
-    handleDeleteOption(optionToRemove) {
+    handleDeleteOption = (optionToRemove) => {
       // console.log('hdo', option);
       this.setState((prevState)=>({
         options: prevState.options.filter((option)=>{
@@ -60,13 +63,13 @@ class IndecisionApp extends React.Component {
     }
   
   
-    handlePick() {
+    handlePick = () => {
       const randomNum = Math.floor(Math.random() * this.state.options.length);
       const option = this.state.options[randomNum];
       alert(option);
     }
   
-    handleAddOption(option) {
+    handleAddOption = (option) => {
       // console.log(option);
       if (!option) {
         return 'Enter valid value to add item';
