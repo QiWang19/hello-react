@@ -463,6 +463,7 @@ IndecisionApp.defaultProps = {
 };
   
 ```
+
 also give value in the tag  
 
 ```javascript
@@ -666,4 +667,12 @@ yarn run build
 
 ### React model: third party component  
 
-#### Modal can show in dynamic way
+#### Modal can show in dynamic way  
+
+### Styling React
+
+#### Set up webpack for SCSS  
+
+1. test: files end with css  
+2. install : css-loader; style-loader 
+3. import file into app.js
