@@ -666,3 +666,4 @@ yarn run build
 
 ### React model: third party component  
 
+#### Modal can show in dynamic way
