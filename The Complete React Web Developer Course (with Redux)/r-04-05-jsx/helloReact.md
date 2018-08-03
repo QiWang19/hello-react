@@ -675,4 +675,26 @@ yarn run build
 
 1. test: files end with css  
 2. install : css-loader; style-loader 
-3. import file into app.js
+3. import file into app.js  
+
+#### rem: set size toll  
+
+set scss: blocks(Header),
+elements: title  
+
+#### Normalize.css  
+
+see same style in Chrome or Firefox
+
+support both css and scss  
+
+```js
+ {
+    test: /\.s?css$/,
+    use:[
+        'style-loader',
+        'css-loader',
+        'sass-loader'
+    ]
+}]
+```
