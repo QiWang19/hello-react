@@ -3,7 +3,15 @@ html {
 }
 
 body {
+    background: $dark-blue;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
+    font-size: $m-size;
 }
+button:disabled {
+    cursor: default;
+}
+button {
+    cursor: pointer;
+}
+
 

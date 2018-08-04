@@ -697,4 +697,20 @@ support both css and scss
         'sass-loader'
     ]
 }]
-```
+```  
+
+#### Write scss & import the style values  
+
+$off-white;
+
+align center
+
+```css
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 $m-size;
+}
+```  
+sass reference functions: built in function of scss.  
+
