@@ -713,4 +713,7 @@ align center
 }
 ```  
 sass reference functions: built in function of scss.  
+BEM: block, element, modifier  
+
+
 
