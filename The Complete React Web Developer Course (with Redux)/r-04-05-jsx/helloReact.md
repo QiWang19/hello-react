@@ -715,5 +715,90 @@ align center
 sass reference functions: built in function of scss.  
 BEM: block, element, modifier  
 
+#### styling Options  
 
+- set up selector for widget-header
+- set margin
+- use the class
 
+```scss
+.widget-header__title {
+    margin: 0;
+}
+```  
+
+```js
+<div className="widget-header">
+          <h3 className="widget-header__title">Your Options</h3>
+```
+
+使用map的index  
+
+```js
+props.options.map((option, index) => 
+    <Option 
+    key={option} 
+    optionText={option}
+    count={index + 1}
+    handleDeleteOption={props.handleDeleteOption}
+    />)
+```  
+
+#### styling react modal  
+
+under _modal.scss  
+ReactModalPortal do not need to add it to className.
+
+```js
+.ReactModalPortal > div {
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background: $light-blue;
+    color:white;
+    max-width: 30rem;
+    outline: none;
+    padding: $l-size;
+    text-align: center;
+}
+
+.modal__title {
+    margin: 0 0 $m-size 0;
+}
+
+.modal__body {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 $l-size 0;
+    word-break: break-all;
+}
+```  
+
+change for mobile device  
+
+```js
+@media (min-width: 45rem) {
+    .add-option {
+        flex-direction: row;
+    }
+    .add-option__input {
+        margin:0 $s-size 0 0;
+    }
+}
+```

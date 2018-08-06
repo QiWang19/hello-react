@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Option = (props) => (
-    <div>
+    <div className="option">
         {/* Option component here */}
-        Option: {props.optionText}
+        <p className="option__text">{props.count}.{props.optionText}</p>
         {/* <button 
             onClick={props.handleDeleteOption}
         > */}
