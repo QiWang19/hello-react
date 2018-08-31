@@ -813,4 +813,33 @@ use client side server without roundtrip to server and then return to client to 
 
 ![](pic/react_router.png)  
 
-#### condig react- router
+#### condig react- router  
+
+react-router training 
+https://github.com/ReactTraining/react-router  
+
+install react-router-dom
+
+#### add multiple pages  
+
+```js
+import {BrowserRouter, Route} from 'react-router-dom';
+
+const routes = (
+    <BrowserRouter>
+        <div>
+            <Route path="/" component={ExpenseDashboardPage} exact={true}/>
+            <Route path="/create" component={AddExpensePage}/>
+        </div>
+    </BrowserRouter>
+);
+
+ReactDOM.render(routes, document.getElementById('app'));
+```  
+set client side routing. webpack.js
+
+```js
+historyApiFallback: true
+```
+
+
