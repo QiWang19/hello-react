@@ -813,7 +813,7 @@ use client side server without roundtrip to server and then return to client to 
 
 ![](pic/react_router.png)  
 
-#### condig react- router  
+#### config react- router  
 
 react-router training 
 https://github.com/ReactTraining/react-router  
@@ -841,5 +841,3 @@ set client side routing. webpack.js
 ```js
 historyApiFallback: true
 ```
-
-
