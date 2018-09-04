@@ -824,7 +824,7 @@ install react-router-dom
 
 ```js
 import {BrowserRouter, Route} from 'react-router-dom';
-
+<!-- exact={true} only render Route with exact path name-->
 const routes = (
     <BrowserRouter>
         <div>
@@ -840,4 +840,16 @@ set client side routing. webpack.js
 
 ```js
 historyApiFallback: true
-```
+```  
+
+#### Set 404 not found page  
+
+1. import Switch modual, will stop int <BrowserRouter> when finds a match.  
+2. Use <Switch></Switch> inside <BrowserRouter>
+
+#### Linked between Routers
+
+Avoid refresh the whole page when path changes, using client side routing.
+
+- import Link.
+- import Navlink, more suitable for a navigation.
