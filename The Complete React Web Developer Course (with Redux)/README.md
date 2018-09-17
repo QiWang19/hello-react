@@ -852,4 +852,8 @@ historyApiFallback: true
 Avoid refresh the whole page when path changes, using client side routing.
 
 - import Link.
-- import Navlink, more suitable for a navigation.
+- import Navlink, more suitable for a navigation.  
+
+#### Orgnize routers  
+
+One component one file --- deal with one URL
